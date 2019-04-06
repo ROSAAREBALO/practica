@@ -1,11 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\app",
-    "\\resources",
-    "\\resources\\views",
-    "\\routes"
+    "\\routes",
+    "\\storage",
+    "\\tests",
+    "\\tests\\Feature"
   ],
-  "SelectedNode": "\\resources",
+  "SelectedNode": "\\.env.example",
   "PreviewInSolutionExplorer": false
 }
