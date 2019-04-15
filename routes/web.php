@@ -31,17 +31,10 @@ Route::get('/usuarios/detalles/{id}', function($id){
  Route::get('/userser/{id}',function($id){
     return "el id es : $id";
  })->where(['id'=> '[0-9]+' ]);
- Route::get('/users/{name}',function($name){
-    return "el nombre es : $name";
- })->where(['name'=>'[A-Z]+']);
- Route::get('/saludo/{name}/{apodo?}',function($name,$apodo=null){
-       if($apodo){
-	      return "tengo nombre $name y tengo apodo $apodo";
-	   }else{
-	       return "tengo nombre $name y no tengo apodo";
-	   }
- });
-Route::get('/detalle/{id}', function($id){
-  return "detalle con id $id";
-});
+Route::get('/nombres/{name}','UserController@nombre')
+->where(['name'=>'[A-Z]+']);
+ 
+Route::get('detalle/{id}','UserController@show');
 
+Route::get('/usuarios','UserController@index');
+Route::get('/saludo/{name}/{nickname?}','WelcomeUserController');
