@@ -15,9 +15,8 @@ class UserController extends Controller
         '<script>alert("click")</script>'
          ];
   
-        return view('users',[
-            'user'=>$users
-        ]);
+        return view('users')
+              ->with('user',$users);
     }
 
     public function show($id){
