@@ -15,11 +15,5 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
     }
 
-	/*@test*/
-	function testUsuario(){
-		$this->get('/user')
-		     ->assertStatus(200)
-			 ->assertSee('food');
-	}
 	
 }

@@ -19,4 +19,15 @@ class UserModuleTest extends TestCase
 		     ->assertStatus(200)
 			 ->assertSee('food');
     }
+
+    /*@test*/
+	function testUsuario(){
+		$this->get('/usuarios')
+		     ->assertStatus(200)
+             ->assertSee('Usuarios')
+             ->assertSee('elias')
+             ->assertSee('luis');
+
+	}
+	
 }
