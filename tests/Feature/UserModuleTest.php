@@ -24,10 +24,22 @@ class UserModuleTest extends TestCase
 	function testUsuario(){
 		$this->get('/usuarios')
 		     ->assertStatus(200)
-             ->assertSee('Usuarios')
+             ->assertSee('Listado de usuarios')
              ->assertSee('elias')
              ->assertSee('luis');
+           
 
 	}
-	
+    
+    /*@test*/
+    function testUsuarioEmpty(){
+         $this->get('/usuarios?empty')
+              ->assertStatus(200)
+              ->assertSee('Listado de usuarios')
+             ->assertSee('no hay registrado ningunn usuario');
+             
+         
+
+
+    }
 }
