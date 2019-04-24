@@ -42,4 +42,11 @@ class UserModuleTest extends TestCase
 
 
     }
+
+    /*@test*/
+     function testusuarioId(){
+        $this->get('/usuarios/10')
+            ->assertStatus(200)
+            ->assertSee('Mostrar detalles del usuario : 10');
+     }
 }

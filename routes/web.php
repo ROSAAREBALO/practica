@@ -37,4 +37,5 @@ Route::get('/nombres/{name}','UserController@nombre')
 Route::get('detalle/{id}','UserController@show');
 
 Route::get('/usuarios','UserController@index');
+Route::get('/usuarios/{id}','UserController@show');
 Route::get('/saludo/{name}/{nickname?}','WelcomeUserController');

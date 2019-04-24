@@ -24,14 +24,16 @@ class UserController extends Controller
   
        /* return view('users')
               ->with('user',$users); */
-              return view('users',[
+              return view('user.index',[
                   'user'=>$users,
                   'title'=>'Listado de usuarios'
               ]);
     }
 
     public function show($id){
-        return "detalle con id $id";
+        return view('user.show',[
+            'id'=>$id
+        ]);
     }
 
     public function nombre($name){
